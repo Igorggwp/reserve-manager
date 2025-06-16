@@ -41,4 +41,3 @@ reserve-manager/
 - Docker e Docker Compose
 - Java 17 e Maven 
 
-```

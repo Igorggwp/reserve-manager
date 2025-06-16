@@ -4,6 +4,6 @@ COPY . .
 RUN mvn clean package -DskipTests
 FROM openjdk:17-jdk-slim
 WORKDIR /app
-COPY --from=build /app/target/user*.jar /app/user.jar
-EXPOSE 8081
-ENTRYPOINT ["java", "-jar", "user.jar"] 
+COPY --from=build /app/target/api-gateway*.jar /app/api-gateway.jar
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "api-gateway.jar"]

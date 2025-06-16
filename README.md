@@ -9,11 +9,11 @@ Sistema distribuído para gerenciar usuários, salas e reservas com arquitetura 
 - **Salas (8082)**: cadastro e gestão de salas
 - **Reservas (8083)**: criação e cancelamento de reservas
 
-Todos usam PostgreSQL, Kafka e Spring Boot.
+Todos usam PostgreSQL e Kafka
 
 ## Tecnologias
 
-- Java 17, Spring Boot, Thymeleaf
+- Java 17, Spring Boot
 - PostgreSQL, Kafka
 - REST APIs
 - Docker e Docker Compose
@@ -24,46 +24,21 @@ Todos usam PostgreSQL, Kafka e Spring Boot.
 - Criar e cancelar reservas
 - Verificar disponibilidade e conflitos
 
-## Como Rodar
-
-### Scripts PowerShell
-
-```powershell
-.\start-services.ps1   # Inicia
-.\stop-services.ps1    # Para
-```
-
-### Manual
-
-```bash
-docker-compose up -d
-```
-
-Acesse: [http://localhost:8080/reservas](http://localhost:8080/reservas)
 
 ## Estrutura
 
 ```
-reservas-salas-microservices/
+reserve-manager/
 ├── api-gateway/
-├── usuario-service/
-├── sala-service/
-├── reserva-service/
-├── start-services.ps1
-├── stop-services.ps1
+├── user/
+├── room/
+├── reserve/
 └── docker-compose.yml
 ```
 
 ## Requisitos
 
 - Docker e Docker Compose
-- Java 17 e Maven (dev)
-- PowerShell (Windows)
+- Java 17 e Maven 
 
-## Problemas Comuns
-
-```powershell
-docker-compose logs -f     # Ver logs
-docker-compose ps          # Ver status
-docker-compose down -v     # Resetar tudo
 ```
